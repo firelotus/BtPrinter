@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_printer_setting_change_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:gravity="center_vertical"
+        android:background="#EEEEEE"
+        android:orientation="horizontal"
+        android:padding="16px">
+
+        <ImageView
+            android:id="@+id/img_printer_setting_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16px"
+            android:src="@drawable/ic_bluetooth_device_connected" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_printer_setting_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8px"
+                android:text="打印机未连接"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_printer_setting_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/printTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_printer_setting_change_device"
+        android:text="打印测试"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_light" />
+
+</RelativeLayout>
