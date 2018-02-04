@@ -9,11 +9,10 @@ import java.util.Map;
 
 /**
  * SharedPreferences相关的辅助类
- * Created by duxikuan on 2017/1/11.
  * 其中context参数传入Application.getAppContext()
  */
 
-public class SFSharedPreferences {
+public class SharedPreferencesUtil {
         /*Properties p = new Properties();
         p.load(context.getResources().openRawResource(R.raw.system));
         NAMESPACE = p.getProperty("NAMESPACE");*/

@@ -68,8 +68,8 @@ public enum BluetoothSdkManager {
         mQueue = printQueue.getmQueue();
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         //获取本地保存的已连接的设备信息
-        btName = (String) SFSharedPreferences.get(mContext, BluetoothSdkManager.BT_PREFERENCE, BluetoothSdkManager.KEY_BT_NAME, "");
-        btAddress = (String) SFSharedPreferences.get(mContext, BluetoothSdkManager.BT_PREFERENCE, BluetoothSdkManager.KEY_BT_ADDRESS, "");
+        btName = (String) SharedPreferencesUtil.get(mContext, BluetoothSdkManager.BT_PREFERENCE, BluetoothSdkManager.KEY_BT_NAME, "");
+        btAddress = (String) SharedPreferencesUtil.get(mContext, BluetoothSdkManager.BT_PREFERENCE, BluetoothSdkManager.KEY_BT_ADDRESS, "");
     }
 
     /**
@@ -325,8 +325,8 @@ public enum BluetoothSdkManager {
                     mConnectDeviceAddress = msg.getData().getString(ConstantDefine.KEY_DEVICE_ADDRESS);
 
                     //连接成功后,保存本地
-                    SFSharedPreferences.put(mContext, BT_PREFERENCE, KEY_BT_NAME, mConnectDeviceName);
-                    SFSharedPreferences.put(mContext, BT_PREFERENCE, KEY_BT_ADDRESS, mConnectDeviceAddress);
+                    SharedPreferencesUtil.put(mContext, BT_PREFERENCE, KEY_BT_NAME, mConnectDeviceName);
+                    SharedPreferencesUtil.put(mContext, BT_PREFERENCE, KEY_BT_ADDRESS, mConnectDeviceAddress);
                     //同步当前连接设备信息,避免中途切换蓝牙设备,断开再次打印时,自动连接的设备仍为上一次设备的问题
                     btName = mConnectDeviceName;
                     btAddress = mConnectDeviceAddress;
